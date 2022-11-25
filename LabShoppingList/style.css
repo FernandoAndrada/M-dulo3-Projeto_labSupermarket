@@ -1,0 +1,143 @@
+
+
+#bodyDesc{
+
+  
+  background:linear-gradient(to bottom, #cc8575 5%, #cc9f94 100%);
+  box-shadow: 0px 0px 30px #737599;
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 1rem;
+
+  
+}
+
+#textBd{
+
+  color:rgb(63, 63, 70);
+  text-decoration: none;
+  font-family: Arial;
+  background: transparent;
+  
+
+}
+
+.space{
+
+  
+  background:linear-gradient(to top, #020d31 5%, #112A7A 100%);
+  box-shadow: 0px 0px 30px #737599;
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 1rem;
+
+}
+
+.card{
+
+  color:white;
+  font-family: Arial;
+  font-size: 1.5rem;
+  
+}
+
+.input{
+
+  width: 40%;
+
+}
+
+.but1{
+
+  box-shadow:inset 0px -3px 7px 0px #29bbff;
+background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+background-color:#2dabf9;
+
+border-radius:5px;
+border:1px solid #0b0e07;
+display:inline-block;
+
+color:#ffffff;
+font-family:Arial;
+font-size:18px;
+padding:1px 23px;
+text-decoration:none;
+text-shadow:0px 1px 0px #263666;
+  
+  width: auto;
+  height: 2rem;
+  top: 18rem;
+  left: 24rem;
+  margin: 1rem;
+}
+
+.but1:hover {
+background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+background-color:#0688fa;
+}
+
+.but2{
+
+  background-color: transparent;
+  border: transparent;
+
+  color:#f10707;
+  font-family:Arial;
+  font-size:20px;
+  font-weight: 900;
+  padding:1px 23px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #263666;
+  cursor: pointer;
+  
+
+}
+
+.but3{
+
+  cursor: pointer;
+  margin: 8px;
+}
+
+.list{
+
+  font-size: 1.5rem;
+  color:rgb(236, 236, 246);
+  padding: 2rem;
+  width: 50%;
+  border-radius: 1rem;
+  background:linear-gradient(to top, #232f53 5%, #4C64AD 100%);
+  
+
+}
+
+.price{
+
+  position: relative;
+  
+  background: #0688fa;
+  width: 300rem;
+  left: 20rem;
+  
+}
+
+.totComp{
+
+  position:absolute;
+  top:35%;
+  left: 70%;
+  width: auto;
+}
+
+.valComp{
+
+  position:absolute;
+  top:40%;
+  font-size: 3rem;
+  left: 70%;
+  width: auto;
+}
+
+li{
+  list-style: none;
+}
