@@ -83,7 +83,7 @@ function addItem(){
     const item = 
     ('<li><input class="but3" type="checkbox" id='+produto.value
     +' name= '+ produto.value
-    +' ><label for='+produto.value
+    +' onclick= inputPrice()><label for='+produto.value
     +'><a id="popPrice" href="javascript:'+inputPrice
     +' inputPrice();">'
     + produto.value + 
