@@ -1,9 +1,11 @@
 import './style.css'
 import { openWindow } from './openWindow';
+import { inputPrice } from './inputPrice';
 
 
 var lista = document.querySelector('#ul');
-var lista2 = document.querySelector('#ul')
+var lista2 = document.querySelector('#ul');
+
 var produto = document.querySelector('#produto');
 var botao = document.querySelector('#btn');
 
@@ -14,6 +16,10 @@ botao.addEventListener('click', addItem);
 //const listProd = new Set([]);
 var listProd = [];
 
+
+
+
+
 // Verifica se lista de produtos está vazia se estiver pega os dados do LS.
 if(listProd.length < 1){
     for(var i=0; i <= localStorage.length ; i++){
@@ -22,17 +28,28 @@ if(listProd.length < 1){
 }
 
 for( var i=1 ; i <= localStorage.length ; i++){
-const itemListProd = 
-    ('<li><input class="but3" type="checkbox" id='+listProd[i]
+    const itemListProd = 
+    ('<li id="li1"><input class="but3" type="checkbox" id='+listProd[i]
     +' name= '+ listProd[i]
-    +' ><label for='+listProd[i]
-    +'>'
+    +' onclick= inputPrice()><label for='+listProd[i]
+    +'><a id="popPrice" href="javascript:'+inputPrice
+    +' inputPrice();">'
     + listProd[i] + 
-    '<button id="btn" class="but2">X</button></label></li>');
+    '</a><button id="btn2"  class="but2">X</button></label></li>');
 
+    lista2.innerHTML = lista2.innerHTML + itemListProd;
 
-        lista2.innerHTML = lista2.innerHTML + itemListProd;
 }
+    
+    //  function deletaItem() {
+    //      var del = confirm("Você tem certeza que deseja remover esse item?");
+    //      if (del ===true)
+    //      {
+    //       localStorage.removeItem(2);   
+    //          }
+    //          document.location.reload(false)}
+
+
 
 function addItem(){
     
@@ -49,6 +66,16 @@ function addItem(){
     for (var i=1; i < listProd.length ; i++){       
         localStorage.setItem( i , listProd[i]);
         }
+
+
+    //  function deletaItem() {
+    //      var del = confirm("Você tem certeza que deseja remover esse item?");
+    //      if (del ===true)
+    //      {
+    //       localStorage.removeItem(2);   
+    //          }
+    //          document.location.reload(false)}
+
 // Lista HTML. 
 
     
@@ -57,25 +84,22 @@ function addItem(){
     ('<li><input class="but3" type="checkbox" id='+produto.value
     +' name= '+ produto.value
     +' ><label for='+produto.value
-    +'>'
+    +'><a id="popPrice" href="javascript:'+inputPrice
+    +' inputPrice();">'
     + produto.value + 
-    '<button id="btn" class="but2">X</button></label></li>');
+    '</a><button id="btn" class="but2">X</button></label></li>');
     
     
     lista.innerHTML = lista.innerHTML + item;
 
-     
 
     produto.value = '';
     produto.focus();
     openWindow();  
 
     
-    
-    
-    
     console.log(listProd)
-    console.log(listProd)
+   
     
 }
 }
@@ -85,6 +109,13 @@ produto.addEventListener('keyup', function(e){
         addItem();
     }
 })
+
+
+
+
+
+
+
 
 //async function manipulaLista(){
     //     try{
