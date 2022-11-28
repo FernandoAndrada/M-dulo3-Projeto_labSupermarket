@@ -38,17 +38,16 @@ for( var i=0 ; i <= 100 ; i++){
 }
 
    
-
+// Adiciona produto pelo teclado.
     produto.addEventListener('keyup', function(e){
         if (e.keyCode === 13){
             addItem();
         }
     })
 
+//Adiciona produtos
 function addItem(){
     
-    
-
 // Validação numero caracteres.
     if((produto.value.length < 8)|(produto.value.length > 64)) {
         alert("Digite um produto com mais de 8 caracteres e menos de 64.")
