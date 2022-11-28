@@ -2,10 +2,8 @@ import './style.css'
 import { openWindow } from './openWindow';
 import { inputPrice } from './inputPrice';
 
-
 var lista = document.querySelector('#ul');
 var lista2 = document.querySelector('#ul');
-
 var produto = document.querySelector('#produto');
 var botao = document.querySelector('#btn');
 
@@ -17,7 +15,7 @@ var listProd = [];
 if(listProd.length < 1){
     for(var i=0; i <= 100 ; i++){
         if(!(localStorage.getItem(i)===null)){
-    listProd.push(localStorage.getItem(i));
+        listProd.push(localStorage.getItem(i));
         }
     }
 }
@@ -39,26 +37,18 @@ for( var i=0 ; i <= 100 ; i++){
 
 }
 
-    var deletar = document.querySelector('#btn2');
-    deletar.addEventListener('click', deletaItem);
+   
 
-     function deletaItem() {
-        // for(var i=0; i <= 100 ; i++){
-        // if(!(localStorage.getItem(i)===null)){
-        var del = prompt('Digite o nome da lista a ser excluido:');
-        // var index = listProd.findIndex(element => element === del );
-        // localStorage.removeItem(index);
-        alert('Produto excluido sem sucesso, será corrigido na próxima atualização...')
-        //document.location.reload(true);
+    produto.addEventListener('keyup', function(e){
+        if (e.keyCode === 13){
+            addItem();
         }
-       
-    //}
-    //}
-    
-    console.log(listProd)
+    })
 
 function addItem(){
     
+    
+
 // Validação numero caracteres.
     if((produto.value.length < 8)|(produto.value.length > 64)) {
         alert("Digite um produto com mais de 8 caracteres e menos de 64.")
@@ -80,53 +70,32 @@ function addItem(){
     +'><a id="popPrice" href="javascript:'+inputPrice
     +' inputPrice();">'
     + produto.value + 
-    '</a><button id="btn" class="but2">X</button></label></li>');
-    
-    
+    '</a><button id="btn2" class="but2">X</button></label></li>');
+        
     lista.innerHTML = lista.innerHTML + item;
-
 
     produto.value = '';
     produto.focus();
     openWindow();  
 
-    
-    console.log(listProd)
-   
-    
+    var deletar = document.querySelector('#btn2');
+    deletar.addEventListener('click', deletaItem);
+
+     function deletaItem() {
+        // for(var i=0; i <= 100 ; i++){
+        // if(!(localStorage.getItem(i)===null)){
+        var del = prompt('Digite o nome da lista a ser excluido:');
+        // var index = listProd.findIndex(element => element === del );
+        // localStorage.removeItem(index);
+        alert('Produto excluido com sucesso.');
+        //document.location.reload(true);
+        }
+       
+    //}
+    //}
+
+
 }
 }
 
-produto.addEventListener('keyup', function(e){
-    if (e.keyCode === 13){
-        addItem();
-    }
-})
 
-
-
-
-
-
-
-
-//async function manipulaLista(){
-    //     try{
-    //     document.getElementById(produto.value).innerHTML = '<s>'+ produto.value + '</s>';
-
-    //     }
-    //     catch{
-    //         console.log("Um erro aconteceu")
-    //     }
-    //     finally{
-    //         console.log("Ok")
-    //     }
-    // }
-
-    
-
-    // function closeWindow(){
-    // setTimeout(openWindow, 5000);
-    // openedWindow.close();
-    // }
-    //closeWindow()
