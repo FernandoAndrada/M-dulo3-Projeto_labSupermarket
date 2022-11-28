@@ -7,7 +7,7 @@ export function inputPrice() {
         if((!priceBuy)){
             alert('Por favor digite um número!')
         }else{
-            alert('voce digitou'+priceBuy);
+            
 
             var precoAtual = (document.querySelector('span'));
             
@@ -17,7 +17,7 @@ export function inputPrice() {
             var listaPrice = document.querySelector('#price');
 
             
-            var itemPrice = (`<span>${(precoNovo)}</span>`);
+            var itemPrice = (`<span>${(precoNovo.toFixed(2))}</span>`);
 
             
 

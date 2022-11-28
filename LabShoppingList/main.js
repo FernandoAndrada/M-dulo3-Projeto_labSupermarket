@@ -9,25 +9,21 @@ var lista2 = document.querySelector('#ul');
 var produto = document.querySelector('#produto');
 var botao = document.querySelector('#btn');
 
-
-
-
 botao.addEventListener('click', addItem);
-//const listProd = new Set([]);
+
 var listProd = [];
-
-
-
-
 
 // Verifica se lista de produtos está vazia se estiver pega os dados do LS.
 if(listProd.length < 1){
-    for(var i=0; i <= localStorage.length ; i++){
+    for(var i=0; i <= 100 ; i++){
+        if(!(localStorage.getItem(i)===null)){
     listProd.push(localStorage.getItem(i));
+        }
     }
 }
 
-for( var i=1 ; i <= localStorage.length ; i++){
+for( var i=0 ; i <= 100 ; i++){
+    if(!(listProd[i]===undefined)){
     const itemListProd = 
     ('<li id="li1"><input class="but3" type="checkbox" id='+listProd[i]
     +' name= '+ listProd[i]
@@ -35,21 +31,31 @@ for( var i=1 ; i <= localStorage.length ; i++){
     +'><a id="popPrice" href="javascript:'+inputPrice
     +' inputPrice();">'
     + listProd[i] + 
-    '</a><button id="btn2"  class="but2">X</button></label></li>');
+    '</a><button id="btn2"  class="but2">'+
+    'X</button></label></li>');
 
     lista2.innerHTML = lista2.innerHTML + itemListProd;
+    }
 
 }
+
+    var deletar = document.querySelector('#btn2');
+    deletar.addEventListener('click', deletaItem);
+
+     function deletaItem() {
+        // for(var i=0; i <= 100 ; i++){
+        // if(!(localStorage.getItem(i)===null)){
+        var del = prompt('Digite o nome da lista a ser excluido:');
+        // var index = listProd.findIndex(element => element === del );
+        // localStorage.removeItem(index);
+        alert('Produto excluido sem sucesso, será corrigido na próxima atualização...')
+        //document.location.reload(true);
+        }
+       
+    //}
+    //}
     
-    //  function deletaItem() {
-    //      var del = confirm("Você tem certeza que deseja remover esse item?");
-    //      if (del ===true)
-    //      {
-    //       localStorage.removeItem(2);   
-    //          }
-    //          document.location.reload(false)}
-
-
+    console.log(listProd)
 
 function addItem(){
     
@@ -64,22 +70,9 @@ function addItem(){
     
 // Inser os dados no localStorage.    
     for (var i=1; i < listProd.length ; i++){       
-        localStorage.setItem( i , listProd[i]);
+        localStorage.setItem( i, listProd[i]);
         }
-
-
-    //  function deletaItem() {
-    //      var del = confirm("Você tem certeza que deseja remover esse item?");
-    //      if (del ===true)
-    //      {
-    //       localStorage.removeItem(2);   
-    //          }
-    //          document.location.reload(false)}
-
-// Lista HTML. 
-
     
-
     const item = 
     ('<li><input class="but3" type="checkbox" id='+produto.value
     +' name= '+ produto.value

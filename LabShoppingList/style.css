@@ -43,7 +43,8 @@
 
 .input{
 
-  width: 40%;
+  width: 50%;
+  left: 4%;
 
 }
 
@@ -55,7 +56,9 @@ background-color:#2dabf9;
 
 border-radius:5px;
 border:1px solid #0b0e07;
-display:inline-block;
+position:relative;
+display:flex;
+
 
 color:#ffffff;
 font-family:Arial;
@@ -64,12 +67,15 @@ padding:1px 23px;
 text-decoration:none;
 text-shadow:0px 1px 0px #263666;
 cursor: pointer;
+align-items: center;
+justify-content: center;
   
-  width: auto;
-  height: 2rem;
-  top: 18rem;
-  left: 24rem;
-  margin: 1rem;
+width: 8rem;
+height: 2rem;
+top: 20%;
+left: 2.8%;
+margin: 2%;
+
 }
 
 #popPrice{
@@ -134,17 +140,17 @@ background-color:#0688fa;
 .totComp{
 
   position:absolute;
-  top:40%;
-  left: 70%;
+  top:66%;
+  left: 61%;
   width: auto;
 }
 
 .valComp{
 
   position:absolute;
-  top:50%;
+  top:75%;
   font-size: 100%;
-  left: 70%;
+  left: 61%;
   width: auto;
 }
 
@@ -159,7 +165,7 @@ li{
   position:absolute;
   display: flex;
   color: white;
-  top: 31%;
+  top: 32%;
   left: 130%;
   width: max-content;
 
