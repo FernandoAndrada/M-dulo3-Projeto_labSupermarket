@@ -4,7 +4,13 @@
 # M-dulo3-Projeto_labSupermarket
 
 ### Está sendo utilizado o Vite como ferramenta de Front-End.
-### (Em construção.)
+### Diversos bugs encontrados:
+
+- O primeiro produto não está sendo salvo no localStorage;
+- O sistema para deletar o produto não está funcionando.
+- O método de riscar o produto não foi aplicado.
+
+Estes bugs e uma possível melhora no layout ficaram para próxima versão.
 
 # INTRODUÇÃO
 A LAB Supermarket está contratando novos desenvolvedores para o seu quadro de colaboradores, com o intuito de expandir os negócios. Os gestores entendem que antes de finalizar as contratações, é necessário executar um desafio prático onde o futuro colaborador deverá criar um sistema de lista de compras. É hora de ficar feliz, pois você foi escolhido para criar o LabShoppingList.
